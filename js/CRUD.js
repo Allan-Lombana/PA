@@ -39,4 +39,11 @@ export class CRUD{
         if (!this.#existElementWithId(id))
             throw new Error("This element not exists");
     }
+
+    create(data){
+        this.#data.push(data);
+        this.#save();
+        return this.#data.lenght;
+    }
+
 }
